@@ -79,12 +79,26 @@ display: block;
 	body{
 		background-color: #ff0055;
 	}
-	 @media(max-width:768){
-		.gallery__item{
-		 width:200%;
+	@media (max-width : 992px) {
+ 
+		.header {
+			position: relative;
 		}
-		.header{
-			align-items: center;
+	 
+		body {
+			overflow: scroll;
+			display: block;
+			padding: var(--gap);
 		}
+	 
+		.gallery {
+			width: 100%;
+			column-width: 10em;
+			transform: scale(1);
+		}
+		.gallery__item:hover {
+			transform: scale(1);
+		}
+	 
 	}
 }
