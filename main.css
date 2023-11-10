@@ -108,14 +108,14 @@ display: block;
 	bottom: 5vh;
 	right: 5vw;
 	cursor: pointer;
-	width: 10px;
-	height:10px;
+	width: 35px;
+	height:35px;
 	transition: .25s ease;
 }
 .soundbutton img{
 	
-	width: 10px;
-	height:10px;
+	width: 35px;
+	height:35px;
 }
 .soundbutton.paused{
 	opacity: 0.25;
