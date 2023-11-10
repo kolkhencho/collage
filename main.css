@@ -17,6 +17,7 @@
 	 display: flex;
 	 justify-content: center;
 	 align-items: center;
+	 transform: translateZ(5px);
  }
  .header
  {
@@ -40,7 +41,7 @@
  }
  .gallery{
 	width: 30vw;
-	column-width: 2em;
+	column-width: 4em;
 	gap: var(--gap);
 	transform: scale(8.2);
 	will-change: transform;
@@ -101,4 +102,15 @@ display: block;
 		}
 	 
 	}
+}
+.toggle{
+	margin-top: auto;
+	height:40px;
+	width: 800px;
+	background-color: gold;
+}
+.page{
+	overflow: hidden;
+	display: flex;
+	min-height: 100vh;
 }
