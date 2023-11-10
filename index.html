@@ -64,10 +64,33 @@
     <div class="gallery__item"><img src="images/39.jpg" alt="Alt"></div>
     <div class="gallery__item"><img src="images/30.jpeg" alt="Alt"></div>
     
+    
    <div class="soundbutton paused"><img src="images/sound.gif" alt="Alt" ></div>
 <audio class="audio" src="images/song.mp3" loop></audio>
+<div class="toggle"></div>
 </div>
  
+<script>
+    const body=document.querySelector("body"),
+    toggle = document.querySelector(".toggle");
+
+    let getMode = localStorage.getItem("mode");
+    if(getMode&&getMode==="dark"){
+        body.classList.add("dark");
+        toggle.classList.add("active");
+
+    }
+
+    toggle.addEventListener("click",()=>{
+        body.classList.toggle("dark");
+
+        if(!body.classList.contains("dark")){
+            return localStorage.setItem("mode","light");
+        }
+        localStorage.setItem("mode","dark");
+    })
+    toggle.addEventListener("click",()=>toggle.classList.toggle("active"));
+</script>
 
 </body>
 </html>	

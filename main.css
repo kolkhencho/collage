@@ -17,7 +17,8 @@
 	 display: flex;
 	 justify-content: center;
 	 align-items: center;
-	 transform: translateZ(5px);
+	 transform: translateZ(5px);	 
+	transition: all 0.3s ease-in-out;
  }
  .header
  {
@@ -75,11 +76,23 @@ display: block;
 	.header{
 		filter:invert(100%)
 	}
+	.modeReverse::before{
+		background: #ff0055;
+	}
  }
  @media(prefers-color-scheme: light){
 	body{
 		background-color: #ff0055;
 	}
+	.modeReverse::before{
+		background: #008080;
+	}
+	
+}
+
+body.dark{
+	background-color:#ff0055;
+}
 	@media (max-width : 992px) {
  
 		.header {
@@ -102,7 +115,6 @@ display: block;
 		}
 	 
 	}
-}
 .soundbutton{
 	position: center;
 	bottom: 5vh;
@@ -116,7 +128,40 @@ display: block;
 	
 	width: 60px;
 	height:60px;
+	border-radius: 100px;
+	background-color: goldenrod;
+	
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
 }
 .soundbutton.paused{
 	opacity: 0.25;
+}
+.toggle{
+	position: relative;
+	margin-top: 15px;
+	height: 20px;
+	width: 60px;
+	background-color: #ff0055;
+	border-radius: 100px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+	cursor: pointer;
+}
+.toggle::before{
+	content: "";
+	position: absolute;
+	height: 17px;
+	width: 17px;
+	background:goldenrod; 
+	border-radius: 50%;
+	top: 50%;
+	left: 2px;
+	transform: translateY(-50%);
+	transition: all 0.3s ease-in-out;
+}
+.toggle.active::before{
+	background-color: goldenrod;
+	left:calc(68%);
+}
+.toggle.active{
+	background-color: #008080;
 }
