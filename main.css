@@ -103,14 +103,20 @@ display: block;
 	 
 	}
 }
-.toggle{
-	margin-top: auto;
-	height:40px;
-	width: 800px;
-	background-color: gold;
+.soundbutton{
+	position: center;
+	bottom: 5vh;
+	right: 5vw;
+	cursor: pointer;
+	width: 10px;
+	height:10px;
+	transition: .25s ease;
 }
-.page{
-	overflow: hidden;
-	display: flex;
-	min-height: 100vh;
+.soundbutton img{
+	
+	width: 10px;
+	height:10px;
+}
+.soundbutton.paused{
+	opacity: 0.25;
 }
